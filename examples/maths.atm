@@ -1,0 +1,23 @@
+
+
+#ask for input
+@io.print("Enter a number:")
+
+#get a line of input
+input = @io.getline()
+
+#convert the input to a string
+num = @to_number(input)
+
+
+#print the sine of the value
+@io.print("sin(" + input + ") = " + @to_string(@math.sin(num)))
+
+#print the cosine of the value
+@io.print("cos(" + input + ") = " + @to_string(@math.cos(num)))
+
+#print the factorial of the value
+@io.print(input + "! = " + @to_string(num!))
+
+#print the e^num
+@io.print("e ^ " + input + " = " + @to_string(math.e ^ num))

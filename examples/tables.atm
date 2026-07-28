@@ -1,0 +1,50 @@
+
+# this program demonstrates the properties of tables
+# and how they are passed by reference, not value
+
+
+
+#make a table for person 1
+person1 = @table.make()
+
+# initialize the first person
+person1.name   = "Harry"
+person1.age    = 19
+person1.height = 150
+
+# store person1 in person2
+person2        = person1
+
+# initialize person2
+person2.name   = "Ronald"
+person2.height = 10
+
+# make a table for person 3
+person3        = @table.make()
+
+# initialize person 3
+person3.name   = "Hermione"
+person3.age    = person1.age + 1
+person3.height = person2.height
+
+
+# print the data for person1
+@io.print("Person #1")
+@io.print("name:   " + person1.name)
+@io.print("age:    " + @to_string(person1.age))
+@io.print("height: " + @to_string(person1.height))
+@io.print(" ")
+
+# print the data for person2
+@io.print("Person #2")
+@io.print("name:   " + person2.name)
+@io.print("age:    " + @to_string(person2.age))
+@io.print("height: " + @to_string(person2.height))
+@io.print(" ")
+
+# print the data for person3
+@io.print("Person #3")
+@io.print("name:   " + person3.name)
+@io.print("age:    " + @to_string(person3.age))
+@io.print("height: " + @to_string(person3.height))
+@io.print(" ")

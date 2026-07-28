@@ -1,0 +1,22 @@
+
+
+# get a file from the user
+@io.print("Enter a file to read:")
+file = @io.getline()
+
+# read the file and print its contents
+file_contents = @io.readfile(file)
+@io.print(file_contents)
+
+
+# get a file to write from the user
+@io.print("Enter a file to write:")
+file = @io.getline()
+
+# get the file contents
+@io.print("Enter the file contents:")
+file_contents = @io.getline()
+
+
+#write the file
+@io.writefile(file, file_contents)

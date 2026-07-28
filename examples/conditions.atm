@@ -1,0 +1,32 @@
+
+# Simulation for buying tickets to R-rated movies
+# You have to be at least 21 to buy tickets for more than one person,
+# or at least 17 to buy for yourself.
+
+# set the ticket price
+kTicketPrice = 8.50;
+
+# print a welcome message
+@io.print("Welcome to the movie theater!")
+@io.print("I see you are trying to purchase ticket(s) to")
+@io.print("an R-rated movie.")
+
+# get the person's age
+@io.print("Please enter your age:")
+age = @to_number(@io.getline())
+
+
+# check if they can buy even one ticket
+if ( age < 17 )
+	@io.print("Sorry, you gotta be at least 17.")
+else
+	# get the number of tickets they want to buy
+	@io.print("Please enter the number of tickets you would like to buy:")
+	tickets = @to_number(@io.getline())
+
+	if ( (age < 21) and (tickets > 1) )
+		@io.print("Sorry, you gotta be at least 21 to buy more than one ticket.")
+	else
+		@io.print("That will be $" + @to_string(kTicketPrice * tickets))
+	end
+end

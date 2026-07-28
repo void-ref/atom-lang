@@ -1,0 +1,10 @@
+
+
+
+first = "An ox"
+second = "red cats"
+number = @math.sin(math.pi / 4) * 2
+
+full = first + " ate " + @to_string(number) + " " + second
+
+@io.print(full)

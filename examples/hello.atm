@@ -1,0 +1,10 @@
+
+
+@io.print("Enter your first name:");
+first_name = @io.getline();
+
+@io.print("Enter your last name:");
+last_name = @io.getline();
+
+
+@io.print("Hey, " + first_name + " " + last_name + "!")
